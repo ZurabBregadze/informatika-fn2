@@ -1,0 +1,13 @@
+a1,b1 = map(int, input().split(':'))
+a2,b2 = map(int, input().split(':'))
+home = int(input())
+
+score = (b1+b2) - (a1+a2)
+if home == 1 and b1 >= score+a2:
+    score += 1
+elif home == 2 and b2 >= a1:
+    score += 1
+if score < 0:
+    score = 0
+print(score)
+  
